@@ -23,7 +23,7 @@ public class Main {
       /* System.out.println(curso1);
         System.out.println(curso2);
         System.out.println(mentoria);*/
-        BootCamp bootCamp = new BootCamp()();
+        BootCamp bootCamp = new BootCamp();
         bootCamp.setNome("BootCamp java developer");
         bootCamp.setDescricao("Descricao BootCamp java developer");
         bootCamp.getConteudos().add(curso1);

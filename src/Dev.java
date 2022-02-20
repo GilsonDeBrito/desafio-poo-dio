@@ -1,10 +1,7 @@
 import java.io.UnsupportedEncodingException;
 import java.lang.invoke.MethodHandles;
 import java.nio.charset.Charset;
-import java.util.Locale;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -12,8 +9,8 @@ import java.util.stream.Stream;
 public class Dev {
 
     private String nome;
-    private  Set<Conteudo> conteudoInscritos = new linkedMashSet<>();
-    private Set<Conteudo> conteudoConcluidos = new linkedMashSet<>();
+    private  Set<Conteudo> conteudoInscritos = new LinkedHashSet<>();
+    private Set<Conteudo> conteudoConcluidos = new LinkedHashSet<>();
 
     public void  inscreverBootCamp(BootCamp bootCamp){
         this.conteudoInscritos.addAll(bootCamp.getConteudos());
@@ -31,7 +28,7 @@ public class Dev {
     }
 
     public double calcularTotalXP(){
-        return this.conteudoConcluidos.stream().mapToDouble(conteudo-> conteudo.calcularXP()).sum());
+        return this.conteudoConcluidos.stream().mapToDouble(conteudo-> conteudo.calcularXP()).sum();
     }
 
     public String getNome() {
